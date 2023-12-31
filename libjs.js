@@ -3763,6 +3763,11 @@ function user_display(string,length) { globalDisplayToUser(UTF8ToString(string, 
       abort('native code called abort()');
     }
 
+  function _emscripten_console_error(str) {
+      assert(typeof str == 'number');
+      console.error(UTF8ToString(str));
+    }
+
   function _emscripten_date_now() {
       return Date.now();
     }
@@ -4231,6 +4236,7 @@ var asmLibraryArg = {
   "_timegm_js": __timegm_js,
   "_tzset_js": __tzset_js,
   "abort": _abort,
+  "emscripten_console_error": _emscripten_console_error,
   "emscripten_date_now": _emscripten_date_now,
   "emscripten_get_now": _emscripten_get_now,
   "emscripten_memcpy_big": _emscripten_memcpy_big,
@@ -4333,8 +4339,8 @@ var dynCall_viiji = Module["dynCall_viiji"] = createExportWrapper("dynCall_viiji
 /** @type {function(...*):?} */
 var dynCall_jiji = Module["dynCall_jiji"] = createExportWrapper("dynCall_jiji");
 
-var ___start_em_js = Module['___start_em_js'] = 11359140;
-var ___stop_em_js = Module['___stop_em_js'] = 11359231;
+var ___start_em_js = Module['___start_em_js'] = 11359460;
+var ___stop_em_js = Module['___stop_em_js'] = 11359551;
 function invoke_viii(index,a1,a2,a3) {
   var sp = stackSave();
   try {
@@ -4949,4 +4955,4 @@ if (typeof window == "object" && (typeof ENVIRONMENT_IS_PTHREAD == 'undefined' |
     emrun_register_handlers();
   }
 }
-Module.SERENITYOS_COMMIT = "bcb1e548f1639d2e3181db271406b209f8e8b404";
+Module.SERENITYOS_COMMIT = "ee3d09f225e6ab4b133b33df1ea85939bee9da24";
