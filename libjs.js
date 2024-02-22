@@ -4252,6 +4252,7 @@ var asmLibraryArg = {
   "invoke_iiii": invoke_iiii,
   "invoke_ij": invoke_ij,
   "invoke_vi": invoke_vi,
+  "invoke_vii": invoke_vii,
   "invoke_viii": invoke_viii,
   "user_display": user_display
 };
@@ -4339,8 +4340,8 @@ var dynCall_ji = Module["dynCall_ji"] = createExportWrapper("dynCall_ji");
 /** @type {function(...*):?} */
 var dynCall_jiji = Module["dynCall_jiji"] = createExportWrapper("dynCall_jiji");
 
-var ___start_em_js = Module['___start_em_js'] = 11364164;
-var ___stop_em_js = Module['___stop_em_js'] = 11364255;
+var ___start_em_js = Module['___start_em_js'] = 11364500;
+var ___stop_em_js = Module['___stop_em_js'] = 11364591;
 function invoke_viii(index,a1,a2,a3) {
   var sp = stackSave();
   try {
@@ -4367,6 +4368,17 @@ function invoke_iiii(index,a1,a2,a3) {
   var sp = stackSave();
   try {
     return getWasmTableEntry(index)(a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_vii(index,a1,a2) {
+  var sp = stackSave();
+  try {
+    getWasmTableEntry(index)(a1,a2);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
@@ -4955,4 +4967,4 @@ if (typeof window == "object" && (typeof ENVIRONMENT_IS_PTHREAD == 'undefined' |
     emrun_register_handlers();
   }
 }
-Module.SERENITYOS_COMMIT = "cbecd096c2a94a8751aad5e99ac24437ca12e4fd";
+Module.SERENITYOS_COMMIT = "83f1775f15608f3be1b51a38c8937dc0a856c3e7";
