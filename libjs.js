@@ -4952,4 +4952,4 @@ if (typeof window == "object" && (typeof ENVIRONMENT_IS_PTHREAD == 'undefined' |
     emrun_register_handlers();
   }
 }
-Module.SERENITYOS_COMMIT = "3a0e69d86fb85a8e738d1c6ec856640ba833a63c";
+Module.SERENITYOS_COMMIT = "70e2f5167424f717b2ef2a3e2965346121668a5a";
