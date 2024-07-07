@@ -28,7 +28,7 @@ if (Module['ENVIRONMENT']) {
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /home/runner/work/_temp/b963dfe1-13a5-4bde-8919-aa7db09d133c/emsdk-main/upstream/emscripten/src/emrun_prejs.js
+// include: /home/runner/work/_temp/cecb417a-c0b8-44b4-bf95-6261ab3b36f6/emsdk-main/upstream/emscripten/src/emrun_prejs.js
 /**
  * @license
  * Copyright 2013 The Emscripten Authors
@@ -49,7 +49,7 @@ if (typeof window == 'object') {
     Module['arguments'] = [];
   }
 }
-// end include: /home/runner/work/_temp/b963dfe1-13a5-4bde-8919-aa7db09d133c/emsdk-main/upstream/emscripten/src/emrun_prejs.js
+// end include: /home/runner/work/_temp/cecb417a-c0b8-44b4-bf95-6261ab3b36f6/emsdk-main/upstream/emscripten/src/emrun_prejs.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -4888,7 +4888,7 @@ run();
 
 // end include: postamble.js
 
-// include: /home/runner/work/_temp/b963dfe1-13a5-4bde-8919-aa7db09d133c/emsdk-main/upstream/emscripten/src/emrun_postjs.js
+// include: /home/runner/work/_temp/cecb417a-c0b8-44b4-bf95-6261ab3b36f6/emsdk-main/upstream/emscripten/src/emrun_postjs.js
 /**
  * @license
  * Copyright 2013 The Emscripten Authors
@@ -4984,6 +4984,6 @@ if (typeof window == "object" && (typeof ENVIRONMENT_IS_PTHREAD == 'undefined' |
     emrun_register_handlers();
   }
 }
-// end include: /home/runner/work/_temp/b963dfe1-13a5-4bde-8919-aa7db09d133c/emsdk-main/upstream/emscripten/src/emrun_postjs.js
+// end include: /home/runner/work/_temp/cecb417a-c0b8-44b4-bf95-6261ab3b36f6/emsdk-main/upstream/emscripten/src/emrun_postjs.js
 
-Module.SERENITYOS_COMMIT = "00029e096b1066303472cca865e8b8c04d438f85";
+Module.SERENITYOS_COMMIT = "85b7ce8c2f6daf0db80e801d7fb2503d070765ce";
